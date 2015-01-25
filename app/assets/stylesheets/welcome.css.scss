@@ -1,0 +1,138 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.table th{
+   text-align: center;   
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+#logo {
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  display: block;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+ @-webkit-keyframes pulse 
+  {       
+    0% {-webkit-transform: scale(0); opacity: 0;}
+    8% {-webkit-transform: scale(0); opacity: 0;}
+    15% {-webkit-transform: scale(0.1); opacity: 1;}
+    30% {-webkit-transform: scale(0.5); opacity: 1;}
+    100% {opacity: 0; -webkit-transform: scale(1.5);}
+  }
+
+  @-moz-keyframes pulse 
+  {       
+    0% {-moz-transform: scale(0); opacity: 0;}
+    8% {-moz-transform: scale(0); opacity: 0;}
+    15% {-moz-transform: scale(0.1); opacity: 1;}
+    30% {-moz-transform: scale(0.5); opacity: 1;}
+    100% {opacity: 0; -moz-transform: scale(1.5);}
+  }
+  
+  .pulse_holder
+  {
+    display: block;
+    position: absolute;
+    //top: 100px;
+    //left: 350px;
+  }
+    
+  .pulse_holder .pulse_marker 
+  {
+    margin-top: 8px;
+    width: 32px;
+    height: 32px;
+    background: #099;
+    border-radius: 28px;
+    background: url("sensortower.jpg") center;
+  }
+ 
+  .pulse_holder .pulse_rays 
+  {
+    margin: 0 auto;
+    border-radius: 100px;
+    position: absolute;
+    right: -16px;
+    top: -8px;
+    z-index: 10;
+    background-color: transparent;
+    opacity: 0.1;
+    width: 64px;
+    height: 64px;
+    border: 2px solid rgba(0, 128, 64, 1);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+    /* Giving Animation Function */
+    -webkit-animation: pulse 2s linear infinite;
+    -moz-animation: pulse 2s linear infinite; 
+    border-image: initial;
+  }

@@ -1,26 +1,24 @@
-<h1>Phrase Calculator</h1>
-<p>Calculates number Of words/phrases that appear in the text</p>
-<%= form_tag "/parse", method: "post", remote: true do %>
-  <p>
-    <%= label_tag :textarea, "Text to parse" %><br>
-    <%= text_area_tag :textarea %>
-  </p>
+<div class="center jumbotron">
+  <h1>Phrase Calculator</h1>
+  <p>Calculates number Of words/phrases that appear in the text</p>
+  <%= form_tag "/parse", method: "post", remote: true do %>
+    <p class="row">
+      <%= label_tag :textarea, "Text to parse" %><br>
+      <%= text_area_tag :textarea, nil, class: "col-md-8 col-md-offset-2", rows: 4 %>
+    </p>
 
-  <p>
-    <%= label_tag :phrase_size, "Words Per Phase" %><br>
-    <%= select_tag :phrase_size, options_for_select(1..500, 2)  %>
-  </p>
- 
-  <p>
-    <%= submit_tag "Submit" %>
-  </p>
+    <p>
+      <%= label_tag :phrase_size, "Words Per Phase" %><br>
+      <%= select_tag :phrase_size, options_for_select(1..500, 2), class: "selectpicker"  %>
+    </p>
+   
+    <p>
+      <%= submit_tag "Submit", class: "btn btn-lg btn-primary" %>
+    </p>
 
-<div class="display">
+  <div class="display">
+  </div>
+  <div class="container_highchart">
+  </div>
 </div>
-<div class="container">
-</div>
-
-
-
-
 <% end %>

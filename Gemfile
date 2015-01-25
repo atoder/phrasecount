@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Include highcharts
 gem "highcharts-rails", "~> 3.0.0"
 gem 'lazy_high_charts'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

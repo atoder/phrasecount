@@ -1,20 +1,15 @@
 class WelcomeController < ApplicationController
 
   def index
-    #Rails.logger.info("PARAMS: #{params.inspect}")
-    #Rails.logger.info("Post: #{request.post?}")
   end
 
   def create
     text_to_parse = params[:textarea].downcase.split
     words_per_phrase = params[:phrase_size].to_i
     @freq = phrase_frequency(text_to_parse, words_per_phrase)  
-    logger.info("freq #{@freq.inspect}")
     @x_axis = generate_x_axis(@freq)
     @y_axis = generate_y_axis(@freq)
 
-    logger.info("X axis #{@x_axis.inspect}")
-    logger.info("Y axis #{@y_axis.inspect}")
     respond_to do |format|
       format.js {} 
     end

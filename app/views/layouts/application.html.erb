@@ -5,10 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<%= yield %>
+ <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+          <div class="pulse_holder">
+            <div class="pulse_marker">
+                <div class="pulse_rays"></div>
+            </div>
+          </div>
+        <nav>
+          <%= link_to "Phrase Count", root_path, id: "logo", 
+                      class: "center" %>
+        </nav>
+      </div>
+</header>
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
