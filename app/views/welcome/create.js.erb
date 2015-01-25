@@ -1,0 +1,38 @@
+$('.display').empty();
+$('.display').prepend('<%=j render 'stats'  %>');
+
+
+$(function () { 
+    $('.container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Number Of Phrases'
+        },
+        xAxis: {
+            //categories: ['Apples', 'Bananas', 'Oranges']
+            categories: <%= raw(@x_axis) %>
+       },
+        yAxis: {
+            title: {
+                text: 'Number Of Occurences'
+            }
+        },
+        series: [
+                  { name: 'Count',
+                    data: <%= raw(@y_axis) %>
+                  }
+          /*{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }*/
+        ]
+    });
+
+});
+
+

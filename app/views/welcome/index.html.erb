@@ -1,0 +1,26 @@
+<h1>Phrase Calculator</h1>
+<p>Calculates number Of words/phrases that appear in the text</p>
+<%= form_tag "/parse", method: "post", remote: true do %>
+  <p>
+    <%= label_tag :textarea, "Text to parse" %><br>
+    <%= text_area_tag :textarea %>
+  </p>
+
+  <p>
+    <%= label_tag :phrase_size, "Words Per Phase" %><br>
+    <%= select_tag :phrase_size, options_for_select(1..500, 2)  %>
+  </p>
+ 
+  <p>
+    <%= submit_tag "Submit" %>
+  </p>
+
+<div class="display">
+</div>
+<div class="container">
+</div>
+
+
+
+
+<% end %>

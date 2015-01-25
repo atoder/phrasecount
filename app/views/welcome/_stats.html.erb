@@ -1,0 +1,12 @@
+<table class="count_display">
+  <tr>
+    <th>Word</th>
+    <th>Count</th>
+  </tr>
+  <% @freq.each do |key, value| %>
+  <tr>
+    <td><%= key %></td>
+    <td><%= value %></td>
+  </tr>
+  <% end %>
+</table>
